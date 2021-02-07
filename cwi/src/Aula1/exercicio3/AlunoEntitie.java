@@ -1,4 +1,4 @@
-package Aula1;
+package Aula1.exercicio3;
 
 public class AlunoEntitie {
 
