@@ -1,4 +1,4 @@
-package Aula1.exercicio3;
+package exercicio3;
 import java.util.Scanner;
 
 public class AlunoApp {

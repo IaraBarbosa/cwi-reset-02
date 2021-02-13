@@ -1,4 +1,4 @@
-package Aula1.exercicio2;
+package exercicio2;
 import java.util.Scanner;
 
 public class ComparadorApp {
