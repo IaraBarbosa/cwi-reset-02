@@ -16,22 +16,24 @@ public class MinhaCasaMinhaDesgraca {
          *
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
-        opcoesParaFinanciamento.registrarImovel(new Imovel (new Endereco("Rua Chapolim Colorado",
+        opcoesParaFinanciamento.registrarImovel(new Casa (new Endereco("Rua Chapolim Colorado",
                 556, "Barril",
-                "Chespirito", "São Paulo", UnidadeFederativa.SP), 50000.00));
-        opcoesParaFinanciamento.registrarImovel(new Imovel (new Endereco("Rua Cristo Redentor",
+                "Chespirito", "São Paulo", UnidadeFederativa.SP), 50000.00, "com patio"));
+        opcoesParaFinanciamento.registrarImovel(new Casa (new Endereco("Rua Cristo Redentor",
                 613, "Piedade",
-                "Misericórdia", "Rio de Janeiro", UnidadeFederativa.RJ), 1000000.00));
-        opcoesParaFinanciamento.registrarImovel(new Imovel (new Endereco("Rua das Flores",
-                1020, "Vila",
-                "É Tudo Lindo", "Campina Grande", UnidadeFederativa.PB), 30000.00));
-        opcoesParaFinanciamento.registrarImovel(new Imovel (new Endereco("Rua Por do Sol",
+                "Misericórdia", "Rio de Janeiro", UnidadeFederativa.RJ),30000.00 , "com pátio"));
+        opcoesParaFinanciamento.registrarImovel(new Apartamento (new Endereco("Rua das Flores",
+                10, "AP",
+                "Cheiroso", "Lagoa", UnidadeFederativa.PB), 1000000.00, 7));
+        opcoesParaFinanciamento.registrarImovel(new Apartamento (new Endereco("Rua Por do Sol",
                 5013, "AP",
-                "Descanso", "Manaus", UnidadeFederativa.AM), 56320.00));
-        opcoesParaFinanciamento.registrarImovel(new Imovel (new Endereco("Rua dos Bobos",
+                "Descanso", "Manaus", UnidadeFederativa.AM), 1000050.00, 6));
+        opcoesParaFinanciamento.registrarImovel(new Casa (new Endereco("Rua dos Bobos",
                 0, "Sem complemento",
-                "Sem bairro", "Brasília", UnidadeFederativa.DF), 1000050.00));
-
+                "Sem bairro", "Brasília", UnidadeFederativa.DF), 56320.00, "sem pátio"));
+        opcoesParaFinanciamento.registrarImovel(new Apartamento (new Endereco("Rua das Fulanas",
+                702, "AP",
+                "Fofoca", "Santa", UnidadeFederativa.RS), 70000.00, 20));
 
         /**
          * FIM

@@ -1,4 +1,4 @@
-public class Imovel {
+public abstract class Imovel {
 
     private Endereco endereco;
     private Double valor;
@@ -20,8 +20,8 @@ public class Imovel {
         return "Imóvel localizado no endereço: " + this.endereco.getLogradouro()
                 + ", " + this.endereco.getNumero() + ". " + this.endereco.getComplemento()
                 + ". " + this.endereco.getBairro() + ", " + this.endereco.getCidade()
-                + " - " + this.endereco.getEstado().getEstado()
-                + "\nValor: R$" + valor;
+                + " - " + this.endereco.getEstado().getEstado();
     }
 
 }
+
