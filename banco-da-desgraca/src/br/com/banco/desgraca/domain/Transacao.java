@@ -1,8 +1,7 @@
 package br.com.banco.desgraca.domain;
 
-import br.com.banco.desgraca.Data;
-import br.com.banco.desgraca.domain.conta.Conta;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 
 public class Transacao {
@@ -24,11 +23,11 @@ public class Transacao {
     public String registroDaOperacao(){
         if(this.tipoTransacao.equals(TipoTransacao.DEPOSITO)){
             return  this.tipoTransacao.getTransacao() +
-                    " valor R$" + this.valorTransacao
+                    " valor " + DecimalFormat.getCurrencyInstance().format(this.valorTransacao)
                     + " na ";
         }
         return  this.tipoTransacao.getTransacao() +
-                " valor R$" + this.valorTransacao
+                " valor " + DecimalFormat.getCurrencyInstance().format(this.valorTransacao)
                 + " da ";
     }
 

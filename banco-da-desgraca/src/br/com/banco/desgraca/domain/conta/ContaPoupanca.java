@@ -49,7 +49,7 @@ public class ContaPoupanca extends Conta {
             } else {
                 setSaldoConta(getSaldoConta() - (valor + (valor * TAXA_TRASFERENCIA_ENTRE_INSTITUICOES)));
             }
-            System.out.println(transferencia.registroDaOperacao() + this.toString() + contaDestino.toString());
+            System.out.println(transferencia.registroDaOperacao() + this.toString() + " para " + contaDestino.toString());
         } else {
             throw new SaldoInsuficienteException("Saldo Insuficiente!");
         }

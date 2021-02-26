@@ -44,7 +44,7 @@ public class ContaDigital extends Conta {
             contaDestino.depositar(valor);
             setSaldoConta(getSaldoConta() - valor);
             super.salvaTransacao("-", valor, transferencia);
-            System.out.println(transferencia.registroDaOperacao() + this.toString() + contaDestino.toString());
+            System.out.println(transferencia.registroDaOperacao() + this.toString() + " para " + contaDestino.toString());
         } else{
             throw new SaldoInsuficienteException("Saldo Insuficiente!");
         }

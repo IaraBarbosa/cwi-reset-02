@@ -5,6 +5,7 @@ import br.com.banco.desgraca.domain.InstituicaoBancaria;
 import br.com.banco.desgraca.domain.TipoTransacao;
 import br.com.banco.desgraca.domain.Transacao;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
@@ -58,7 +59,8 @@ public abstract class Conta implements ContaBancaria{
     }
 
     public void salvaTransacao(String simboloOperacao, Double valor, Transacao deposito) {
-        transacoes.put(simboloOperacao + "     R$" + valor + "    ", deposito.getDataTransacao());
+        transacoes.put(simboloOperacao + "     " + DecimalFormat.getCurrencyInstance().format(valor)
+                + "    ", deposito.getDataTransacao());
     }
 
     @Override
