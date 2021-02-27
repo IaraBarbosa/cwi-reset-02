@@ -28,7 +28,7 @@ public class ContaDigital extends Conta {
                 System.out.println(saque.registroDaOperacao() + toString());
                 super.salvaTransacao("-", valor, saque);
             } else {
-                throw new ValorSolicitadoException("Valor solicitado não permitido! Saque apenas para notas a partir" +
+                throw new ValorSolicitadoException("Valor solicitado não permitido! Saque apenas para notas a partir " +
                         "de R$10,00 reais");
             }
         } else{
@@ -53,7 +53,8 @@ public class ContaDigital extends Conta {
     public void validaInstituicao(){
         if(!getInstituicaoBancaria().equals(InstituicaoBancaria.ITAU)
                 && !getInstituicaoBancaria().equals(InstituicaoBancaria.NUBANK)){
-            throw new ContaInstituicaoException(getInstituicaoBancaria().getNomeInstituicaoBancaria() + " não permite conta digital");
+            throw new ContaInstituicaoException(getInstituicaoBancaria().getNomeInstituicaoBancaria()
+                    + " não permite conta digital");
         }
     }
 

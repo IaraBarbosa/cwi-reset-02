@@ -78,7 +78,7 @@ public abstract class Conta implements ContaBancaria{
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         if(inicio == null && fim != null){
-            System.out.println("----- EXTRATO " + toString());
+            System.out.println("----- EXTRATO " + toString().toUpperCase());
             for (String key : transacoes.keySet()) {
                 if(transacoes.get(key).isBefore(fim)){
                     String dataFormatada = transacoes.get(key).format(formatter);
@@ -88,7 +88,7 @@ public abstract class Conta implements ContaBancaria{
             System.out.println("-----");
 
         } else if(inicio != null && fim == null){
-            System.out.println("----- EXTRATO " + toString());
+            System.out.println("----- EXTRATO " + toString().toUpperCase());
             for (String key : transacoes.keySet()) {
                 if(transacoes.get(key).isAfter(inicio)) {
                     String dataFormatada = transacoes.get(key).format(formatter);
@@ -96,8 +96,9 @@ public abstract class Conta implements ContaBancaria{
                 }
             }
             System.out.println("-----");
+
         } else{
-            System.out.println("----- EXTRATO " + toString());
+            System.out.println("----- EXTRATO " + toString().toUpperCase());
             for (String key : transacoes.keySet()) {
                 if(transacoes.get(key).isAfter(inicio) && transacoes.get(key).isBefore(fim)) {
                     String dataFormatada = transacoes.get(key).format(formatter);

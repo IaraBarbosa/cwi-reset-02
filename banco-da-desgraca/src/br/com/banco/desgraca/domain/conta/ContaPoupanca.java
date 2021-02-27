@@ -58,7 +58,8 @@ public class ContaPoupanca extends Conta {
 
    public void validaInstituicao() {
         if (getInstituicaoBancaria().equals(InstituicaoBancaria.NUBANK)) {
-            throw new ContaInstituicaoException(getInstituicaoBancaria().getNomeInstituicaoBancaria() + " não permite conta poupança");
+            throw new ContaInstituicaoException(getInstituicaoBancaria().getNomeInstituicaoBancaria()
+                    + " não permite conta poupança");
         }
     }
 
